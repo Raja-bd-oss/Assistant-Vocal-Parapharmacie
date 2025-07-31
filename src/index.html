@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assistant Vocal Paralabel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="history-panel" id="historyPanel">
+    <div class="header">
+      <img src="history-icon.png" alt="Historique" class="icon">
+      <span>Historique</span>
+    </div>
+    <ul id="historyList"></ul>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <img src="logo.webp" alt="Paralabel" class="logo">
+      <h1>Assistant Vocal Paralabel</h1>
+    </header>
+
+    <section class="container">
+      <button class="btn" id="recordBtn">
+         Poser une question
+      </button>
+      <label for="audioUpload" class="btn upload-btn">
+          <i class="fas fa-upload"></i> Importer un fichier audio
+      </label>
+      <input type="file" id="audioUpload" accept="audio/*" style="display: none;" />
+
+      <div id="transcript" class="transcript">Votre question apparaîtra ici...</div>
+      <div id="response" class="response" aria-live="polite">La réponse sera affichée ici...</div>
+      <div id="loader" class="loader"></div>
+      <button id="speakResponse" class="btn"> Lire la réponse</button>
+    </section>
+
+    <footer>
+      <div class="darkmode-toggle">
+        <span>DARKMODE</span>
+        <label class="switch">
+          <input type="checkbox" id="darkModeSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
